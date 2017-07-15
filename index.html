@@ -14,91 +14,111 @@
     </header>
 
     <h2>Place An Order</h2>
-
-    <h3>Choose Size</h3>
-    <form id="pizza-order">
-      <div class="form-check">
-        <label class="form-check-label">
-          <input class="form-check-input" type="radio" name="size" id="size" value="option1">
-          Small - 11 inch
-        </label>
+    <div class=row>
+      <div class=col-md-3>
+        <h4>Sizes <br>
+          Base / Per Topping</h4>
+        </div>
+    </div>
+    <div class=row>
+      <div class=col-md-2>
+        <p>Small 11" <br>
+           $10.00 / $2.50</p>
       </div>
-      <div class="form-check">
-        <label class="form-check-label">
-          <input class="form-check-input" type="radio" name="size" id="size" value="option1">
-          Medium - 13 inch
-        </label>
+      <div class=col-md-2>
+        <p>Medium 13" <br>
+           $15.00 / $2.75</p>
       </div>
-      <div class="form-check">
-        <label class="form-check-label">
-          <input class="form-check-input" type="radio" name="size" id="size" value="option1">
-          Large - 17 inch
-        </label>
+      <div class=col-md-8>
+        <p>Large 17" <br>
+           $20.00 / $3.00</p>
       </div>
+    </div>
 
-        <h3>Choose Toppings</h3>
+      <h3>Choose Size</h3>
+      <form id="pizza-order">
+        <div class="form-check">
+          <label class="size">
+            <input class="form-check-input" type="radio" name="size" id="size" value="small">
+            Small
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="size">
+            <input class="form-check-input" type="radio" name="size" id="size" value="medium">
+            Medium
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="size">
+            <input class="form-check-input" type="radio" name="size" id="size" value="large">
+            Large
+          </label>
+        </div>
 
-        <h4>Meats</h4>
+      <h3>Choose Toppings</h3>
+
+      <h4>Meats</h4>
+
+      <div class="form-check">
+        <label class="topping">
+          <input class="form-check-input" type="checkbox" name="topping" value="Pepperoni">
+          Pepperoni
+        </label>
+        <label class="topping">
+          <input class="form-check-input" type="checkbox" name="topping" value="Italian Sausage">
+          Italian Sausage
+        </label>
+        <label class="topping">
+          <input class="form-check-input" type="checkbox" name="topping" value="Canadian Bacon">
+          Canadian Bacon
+        </label>
+        <label class="topping">
+          <input class="form-check-input" type="checkbox" name="topping" value="Salami">
+          Salami
+        </label>
+        <label class="topping">
+          <input class="form-check-input" type="checkbox" name="topping" value="Chicken Sausage">
+          Chicken Sausage
+        </label>
+
+        <h4>Veggies</h4>
 
         <div class="form-check">
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" id="topping" value="">
-            Pepperoni
+          <label class="topping">
+            <input class="form-check-input" type="checkbox" name="topping" value="Onions">
+            Onions
           </label>
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" id="topping" value="">
-            Italian Sausage
+          <label class="topping">
+            <input class="form-check-input" type="checkbox" name="topping" value="Mushrooms">
+            Mushrooms
           </label>
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" id="topping" value="">
-            Canadian Bacon
+          <label class="topping">
+            <input class="form-check-input" type="checkbox" name="topping" value="Green Peppers">
+            Green Peppers
           </label>
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" id="topping" value="">
-            Salami
+          <label class="topping">
+            <input class="form-check-input" type="checkbox" name="topping" value="Olives">
+            Olives
           </label>
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" id="topping" value="">
-            Chicken Sausage
+          <label class="topping">
+            <input class="form-check-input" type="checkbox" name="topping" value="Pineapple">
+            Pineapple
           </label>
-
-          <h4>Veggies</h4>
-
-          <div class="form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox" id="topping" value="">
-              Onions
-            </label>
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox" id="topping" value="">
-              Mushrooms
-            </label>
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox" id="topping" value="">
-              Green Peppers
-            </label>
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox" id="topping" value="">
-              Olives
-            </label>
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox" id="topping" value="">
-              Pineapple
-            </label>
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox" id="topping" value="">
-              Garlic
-            </label>
-          </div>
+          <label class="topping">
+            <input class="form-check-input" type="checkbox" name="topping" value="Garlic">
+            Garlic
+          </label>
         </div>
-        <br>
-        <button type="submit" name="button">Place Your Order</button>
       </div>
-    </form>
-    <br>
-    <div id="receipt">
-      <p> Your pizza will cost <span id="price"> .</span></p>
+      <br>
+      <button type="submit" name="button">Place Your Order</button>
     </div>
+  </form>
+  <br>
+  <div id="receipt">
+    <p> Your pizza will cost $<span id="price">.00.</span></p>
   </div>
+</div>
 </body>
 </html>
