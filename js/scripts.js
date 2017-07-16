@@ -15,6 +15,7 @@ Pizza.prototype.cost = function() {
 $(document).ready(function() {
   $("form#pizza-order").submit(function(event) {
     event.preventDefault();
+    $("form#pizza-order").hide();
     var inputtedSize = $("input[name=size]:checked").val();
     if (inputtedSize === "small") {
       basePrice = 10.00;

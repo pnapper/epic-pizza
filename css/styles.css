@@ -1,3 +1,12 @@
 #receipt {
   display: none;
 }
+header {
+  padding: 100px;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  text-shadow: black;
+  text-decoration-color: black;
+  background-image: url(http://www.themesltd.com/headers2/pizza_lightning_bolts.png);
+}
