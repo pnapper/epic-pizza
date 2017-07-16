@@ -4,8 +4,12 @@ function Pizza (size, toppings, price) {
   this.price = "";
 }
 
-Pizza.prototype.cost = function(price) {
-  return basePrice + toppings;
+var basePrice = "";
+var toppings = "";
+var inputtedToppings = [];
+
+Pizza.prototype.cost = function() {
+  return basePrice + toppings * inputtedToppings.length;
 }
 
 
@@ -13,40 +17,37 @@ $(document).ready(function() {
   $("form#pizza-order").submit(function(event) {
     event.preventDefault();
     var inputtedSize = $("input[name=size]:checked").val();
-    var basePrice = "";
-    if (inputtedSize === "small") {
-      basePrice = "10";
-    } else if (inputtedSize === "medium") {
-      basePrice = "15";
-    } else {
-      basePrice = "20";
-    }
-    //alert(basePrice);
-    $("#topping").each(function() {
-      var toppings = "";
-      if (inputtedSize === "small") {
-        toppings = "2.50";
-      } else if (inputtedSize === "medium") {
-        toppings = "2.75";
-      } else {
-        toppings = "3"
-      }
-      //newOrder.toppings.push(price)
-      alert(toppings);
-    })
 
-    var inputtedToppings = [];
+    if (inputtedSize === "small") {
+      basePrice = 10;
+    } else if (inputtedSize === "medium") {
+      basePrice = 15;
+    } else {
+      basePrice = 20;
+    }
+    alert(basePrice);
+
+      if (inputtedSize === "small") {
+        toppings = 2.50;
+      } else if (inputtedSize === "medium") {
+        toppings = 2.75;
+      } else {
+        toppings = 3;
+      }
+      alert(toppings);
+
     $("input:checkbox[name=topping]:checked").each(function(){
       var orderToppings = $(this).val();
-      inputtedToppings.push(toppings);
-    });
-    var newOrder = new Pizza (basePrice + inputtedToppings.length * toppings);
-    //alert(inputtedToppings);
+      inputtedToppings.push(orderToppings);
+      console.log(inputtedToppings);
 
-    newOrder.cost.push(price);
+    var newOrder = new Pizza (basePrice, orderToppings, price);
+    console.log(newOrder.cost());
+
+    newOrder.cost(newOrder);
+    $("#price").text(newOrder.price);
 
     $("#receipt").show();
-
-
+    });
   });
 });
